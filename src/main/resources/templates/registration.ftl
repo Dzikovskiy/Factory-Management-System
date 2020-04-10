@@ -3,7 +3,9 @@
 
 
 <@c.page>
-    <div class="mb-1">Add new User</div>
+    <div class="container mt-5 pt-5">
+        <div class="login-header mb-5">Регистрация</div>
     <b>${message?ifExists}</b>
     <@l.login "/registration" true />
+    </div>
 </@c.page>

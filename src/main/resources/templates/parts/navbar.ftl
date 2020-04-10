@@ -43,7 +43,7 @@
             </#if>
             <#if isTech>
                 <li class="nav-item">
-                    <a class="nav-link" href="/documentation">Документация</a>
+                    | Панель техонолога
                 </li>
             </#if>
 
