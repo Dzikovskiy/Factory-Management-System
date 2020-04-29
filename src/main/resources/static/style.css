@@ -8,6 +8,7 @@ body {
     border-radius: 12px;
     width: 275px;
     height: 95px;
+    cursor: pointer
 }
 .circle-btn{
     display: flex;

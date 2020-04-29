@@ -1,6 +1,6 @@
 package com.bsuir.FactorySystem.service;
 
-import com.bsuir.FactorySystem.UserRepository;
+import com.bsuir.FactorySystem.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,9 +1,9 @@
 package com.bsuir.FactorySystem.controller;
 
 
-import com.bsuir.FactorySystem.Role;
-import com.bsuir.FactorySystem.User;
-import com.bsuir.FactorySystem.UserRepository;
+import com.bsuir.FactorySystem.Entities.Role;
+import com.bsuir.FactorySystem.Entities.User;
+import com.bsuir.FactorySystem.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

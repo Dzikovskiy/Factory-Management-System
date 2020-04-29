@@ -1,4 +1,4 @@
-package com.bsuir.FactorySystem;
+package com.bsuir.FactorySystem.Entities;
 
 import org.springframework.security.core.GrantedAuthority;
 

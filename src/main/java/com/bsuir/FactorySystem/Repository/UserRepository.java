@@ -1,5 +1,6 @@
-package com.bsuir.FactorySystem;
+package com.bsuir.FactorySystem.Repository;
 
+import com.bsuir.FactorySystem.Entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

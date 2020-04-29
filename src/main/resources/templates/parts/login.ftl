@@ -13,7 +13,7 @@
             </div>
         </div>
         <#if isRegisterForm>
-            <div class="row justify-content-md-center">
+            <div class="form-group row justify-content-md-center">
                 <div class="col-sm-2">Ваша роль:</div>
                 <div class="col-sm-3">
                     <select name="role" id="roles" class="custom-select">
@@ -27,7 +27,7 @@
         </#if>
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
 
-        <div class="row justify-content-md-center">
+        <div class="form-group row justify-content-md-center">
             <div class="col-sm-2"><#if !isRegisterForm><a href="/registration">Создать аккаунт</a></#if></div>
             <div class="col-sm-3">
                 <button type="submit"
