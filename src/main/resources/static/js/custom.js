@@ -1,7 +1,13 @@
 
 $(function () {
+    $('.container-fluid .add-group.addOperationBtn').on('click', function (event) {
+        event.preventDefault();
+        $('.addOperationModal #addOperationModal').modal();
+    })
+});
 
-    $('.container-fluid .add-group .addCompBtn').on('click', function (event) {
+$(function () {
+    $('.container-fluid .add-group.addCompBtn').on('click', function (event) {
         event.preventDefault();
         $('.addCompModal #addCompModal').modal();
     })

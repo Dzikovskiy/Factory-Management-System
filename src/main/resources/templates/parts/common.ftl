@@ -32,15 +32,7 @@
 
     <#nested>
 
-    <script>
-
-        $(function () {
-            $('.container-fluid .add-group.addCompBtn').on('click', function (event) {
-                event.preventDefault();
-                $('.addCompModal #addCompModal').modal();
-            })
-        });
-    </script>
+    <script src="/static/js/custom.js"></script>
     </body>
     </html>
 </#macro>

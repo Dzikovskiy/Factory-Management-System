@@ -3,21 +3,21 @@
         <div class="form-group row justify-content-md-center">
             <label class="col-sm-2 col-form-label"> Логин : </label>
             <div class="col-sm-3">
-                <input class="form-control" type="text" name="username" placeholder="Логин"/>
+                <input class="form-control" type="text" name="username" placeholder="Логин" required/>
             </div>
         </div>
         <div class="form-group row justify-content-md-center">
             <label class="col-sm-2 col-form-label"> Пароль: </label>
             <div class="col-sm-3">
-                <input class="form-control" type="password" name="password" placeholder="Пароль"/>
+                <input class="form-control" type="password" name="password" placeholder="Пароль" required/>
             </div>
         </div>
         <#if isRegisterForm>
             <div class="form-group row justify-content-md-center">
                 <div class="col-sm-2">Ваша роль:</div>
                 <div class="col-sm-3">
-                    <select name="role" id="roles" class="custom-select">
-                        <option selected>Выберите роль</option>
+                    <select name="role" id="roles" class="custom-select" required>
+                        <option value="" selected>Выберите роль</option>
                         <option value="TECH">Технолог</option>
                         <option value="FOREMAN">Мастер цеха</option>
                         <option value="DISPATCHER">Диспетчер</option>

@@ -1,10 +1,12 @@
 <#import "parts/common.ftl" as c>
 <#import "parts/addCompModal.ftl" as acm>
+<#import "parts/addOperationModal.ftl" as aom>
+
 <@c.page>
     <div class="container-fluid mt-5">
         <div class="d-flex justify-content-end  mb-3">
 
-            <div class="add-group mr-4">
+            <div class="add-group addOperationBtn mr-4">
                 <div class="d-flex my-3 mr-2 ml-3">
                     <div class="add-group-text mr-5 px-3">Добавить<br/>маршрут</div>
                     <div class="circle-btn blue">
@@ -158,6 +160,11 @@
             </div>
         </div>
     </div>
+
+    <div class="addOperationModal">
+        <@aom.modal/>
+    </div>
+
     <div class="addCompModal">
         <@acm.modal/>
     </div>

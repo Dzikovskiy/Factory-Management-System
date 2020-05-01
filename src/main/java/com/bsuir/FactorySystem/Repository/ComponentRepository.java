@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 import java.util.Optional;
 
-public interface ComponentRepository extends CrudRepository<Component, Integer> {
+public interface ComponentRepository extends CrudRepository<Component, Long> {
 
     List<Component> findByName(String name);;
     Optional<Component> findById(Long id);

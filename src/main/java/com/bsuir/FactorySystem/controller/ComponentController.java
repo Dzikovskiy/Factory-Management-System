@@ -21,8 +21,9 @@ public class ComponentController {
 
     @PostMapping("/deleteComponent")
     public String deleteComponent(@RequestParam Long id) {
-        Component component = componentRepository.findById(id).get();
-        componentRepository.delete(component);
+//        Component component = componentRepository.findById(id).get();
+//        componentRepository.delete(component);
+        componentRepository.deleteById(id);
         return "redirect:/tech";
     }
 }
