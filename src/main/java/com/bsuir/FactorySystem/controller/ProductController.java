@@ -4,11 +4,11 @@ import com.bsuir.FactorySystem.Entities.Product;
 import com.bsuir.FactorySystem.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Controller
 public class ProductController {
@@ -20,7 +20,11 @@ public class ProductController {
     public String saveProduct(@RequestParam String name, @RequestParam String[] componentName,
                               @RequestParam Integer[] componentNumber,
                               @RequestParam String[] operationName,
-                              @RequestParam Integer[] operationSeconds) {
+                              @RequestParam Integer[] operationSeconds, @RequestParam Long idProdModal) {
+
+        Optional<Product> optionalProduct = productRepository.findById(idProdModal);
+        Product product = optionalProduct.isPresent() ? optionalProduct.get() : new Product();
+
 
         Map<String, Integer> components = new HashMap<>();
         Map<String, Integer> operations = new HashMap<>();
@@ -28,7 +32,7 @@ public class ProductController {
         fillMap(components, componentName, componentNumber);// fill maps with data from params
         fillMap(operations, operationName, operationSeconds);
 
-        Product product = new Product();
+
         product.setName(name);
         product.setComponentsNumberMap(components);
         product.setOperationsSecondsMap(operations);
@@ -40,6 +44,13 @@ public class ProductController {
     public String deleteOperation(@RequestParam Long id) {
         productRepository.deleteById(id);
         return "redirect:/tech";
+    }
+
+    @GetMapping("/getProductById/{id}")
+    @ResponseBody
+    public Optional<Product> getProductById(@PathVariable Long id) {
+        return productRepository.findById(id);
+
     }
 
     private void fillMap(Map<String, Integer> map, String[] name, Integer[] number) {

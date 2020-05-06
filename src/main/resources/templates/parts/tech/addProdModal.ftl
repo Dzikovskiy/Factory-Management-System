@@ -2,6 +2,7 @@
 
     <div class="modal fade" id="addProdModal" tabindex="-1" role="dialog" aria-labelledby="addProdModalLabel"
          aria-hidden="true">
+
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -12,12 +13,14 @@
                 </div>
 
                 <div class="modal-body ">
+
                     <form method="post" id="saveCompForm" action="/saveProduct">
+                        <input type="hidden" id="idProdModal" name="idProdModal"/>
                         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                         <div class="form-group row ml-1 mb-3">
                             <h5><label for="text" class="col-sm-2 col-form-label">Название:</label></h5>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="name" name="name" value=""
+                                <input type="text" class="form-control" id="prodName" name="name" value=""
                                        placeholder="введите название" required>
                             </div>
                         </div>

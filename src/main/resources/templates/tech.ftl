@@ -1,7 +1,7 @@
 <#import "parts/common.ftl" as c>
-<#import "parts/addCompModal.ftl" as acm>
-<#import "parts/addOperationModal.ftl" as aom>
-<#import "parts/addProdModal.ftl" as apm>
+<#import "parts/tech/addCompModal.ftl" as acm>
+<#import "parts/tech/addOperationModal.ftl" as aom>
+<#import "parts/tech/addProdModal.ftl" as apm>
 
 <@c.page>
     <div class="container-fluid mt-5">
@@ -70,7 +70,9 @@
                         <div class="row">
                             <div class="col-4">
                                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                                <button type="submit" class="btn btn-primary mr-3">Изменить</button>
+                                <button type="submit" id="editProdBtn" href="getProductById/${prod.id}"
+                                        class="btn btn-primary mr-3 editProdBtn">Изменить
+                                </button>
                             </div>
                             <div class="col-4">
                                 <form method="post" action="deleteProduct">

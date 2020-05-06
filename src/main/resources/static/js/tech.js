@@ -17,6 +17,22 @@ $(function () {
 $(function () {
     $('.container-fluid .add-group.addProdBtn').on('click', function (event) {
         event.preventDefault();
+
+        $('.addProdModal #addProdModal').modal();
+    })
+});
+
+//Edit product modal
+$(function () {
+    $(".editProdBtn").on('click', function (event) {
+        event.preventDefault();
+
+        var href = $(this).attr('href');
+        $.get(href,function (product) {
+            $(".addProdModal #prodName").val(product.name);
+            $("#idProdModal").val(product.id);
+        });
+
         $('.addProdModal #addProdModal').modal();
     })
 });
@@ -55,7 +71,6 @@ $("#component-list").on("click", "#btnDelComponent", function () {
     updateComponentRowsNumbers();
 
 });
-
 
 function updateComponentRowsNumbers() {
     $('#component-list tbody tr').each(function (idx) {// или без row
