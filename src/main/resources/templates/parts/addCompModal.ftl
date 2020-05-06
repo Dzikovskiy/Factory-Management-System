@@ -17,7 +17,7 @@
                         <div class="form-group mb-3">
                             <label for="text" class="col-form-label">Название:</label>
                             <input type="text" class="form-control" id="name" name="name" value=""
-                                   placeholder="введите название">
+                                   placeholder="введите название" required>
                             <div class="row justify-content-center mt-3">
                                 <button type="submit" class="btn btn-primary ">Добавить</button>
                             </div>

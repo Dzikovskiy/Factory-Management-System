@@ -17,13 +17,13 @@
                         <div class="form-group mb-3">
                             <label for="text" class="col-form-label">Название цеха (с маленькой):</label>
                             <input type="text" class="form-control" id="workshop_name" name="workshop_name" value=""
-                                   placeholder="введите название цеха">
+                                   placeholder="введите название цеха" required>
                         </div>
                         <div class="form-group mb-3">
                             <label for="text" class="col-form-label">Название операции в этом цеху (с
                                 маленькой):</label>
                             <input type="text" class="form-control" id="operation_name" name="operation_name" value=""
-                                   placeholder="введите название операции">
+                                   placeholder="введите название операции" required>
                             <div class="row justify-content-center mt-3">
                                 <button type="submit" class="btn btn-primary ">Добавить</button>
                             </div>
