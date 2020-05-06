@@ -37,16 +37,18 @@
     <div class="container my-5 pb-5">
         <div class="card-columns ">
             <#list products as prod>
+                <#assign seconds = 0>
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title">${prod.name}</h5>
                         <p class="card-text ">Маршрут:
                         <ul class="list-unstyled text-left mt-2">
-                            <li>1) покрасочный</li>
-                            <li>2) упаковочный</li>
-                            <li>3) сборочный</li>
+                            <#list prod.operationsSecondsMap?keys as key><#assign seconds = seconds + prod.operationsSecondsMap[key]>
+                                <li>${key_index+1}) ${key}   ${prod.operationsSecondsMap[key]} сек.</li>
+                            </#list>
                         </ul>
                         </p>
+                        <p class="card-text ">Всего на штуку: ${seconds} секунд </p>
                         <table class="table table-sm pb-5 table-striped">
                             <thead>
                             <tr>

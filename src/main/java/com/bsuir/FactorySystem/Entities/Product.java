@@ -18,6 +18,15 @@ public class Product {
     @Column(name = "number")
     Map<String,Integer> componentsNumberMap;
 
+
+    @ElementCollection
+    @CollectionTable(name = "product_operation_mapping",
+            joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "id")})
+    @MapKeyColumn(name = "operation_name")
+    @Column(name = "seconds")
+    Map<String,Integer> operationsSecondsMap;
+
+
     public Long getId() {
         return id;
     }
@@ -40,5 +49,13 @@ public class Product {
 
     public void setComponentsNumberMap(Map<String, Integer> components) {
         this.componentsNumberMap = components;
+    }
+
+    public Map<String, Integer> getOperationsSecondsMap() {
+        return operationsSecondsMap;
+    }
+
+    public void setOperationsSecondsMap(Map<String, Integer> operationsSecondsMap) {
+        this.operationsSecondsMap = operationsSecondsMap;
     }
 }

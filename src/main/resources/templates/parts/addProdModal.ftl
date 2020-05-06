@@ -24,6 +24,46 @@
                         <div class="form-group row mt-3">
                             <div class="col-sm-6">
                                 <h5><label for="text" class="col-sm-3 col-form-label">Операции:</label></h5>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <select name="operation" id="operations-select" class="custom-select">
+                                            <option value="" selected>Выберите операцию</option>
+                                            <#list workshops as work>
+                                            <optgroup label="${work.name} цех">
+                                                <#list work.operations as oper>
+                                                <option value="${oper.name}">${oper.name}</option>
+                                                </#list>
+                                            </optgroup>
+                                            </#list>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 ">
+                                        <input type="number" class="form-control" id="operation_number"
+                                               name="operation_number" value=""
+                                               placeholder="секунд">
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" id="btnAddOperationModal"
+                                                class="btn btn-info btnAddOperationModal">Добавить
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="row mx-2 px-2 my-3">
+                                    <table id="operation-list"
+                                           class="table table-sm mr-4 py-5 table-striped operation-list">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Операции</th>
+                                            <th scope="col">Секунды</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <div class="col-sm-6">
                                 <h5><label for="text" class="col-sm-3 col-form-label">Комплектующие:</label></h5>
@@ -41,7 +81,7 @@
                                     <div class="col-3">
                                         <input type="number" class="form-control" id="component_number"
                                                name="component_number" value=""
-                                               placeholder="кол-во" >
+                                               placeholder="кол-во">
                                     </div>
                                     <div class="col-3">
                                         <button type="button" id="btnAddComponent"
