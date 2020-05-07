@@ -34,6 +34,7 @@
     <#nested>
 
     <script src="/static/js/tech.js"></script>
+    <script src="/static/js/dispatcher.js"></script>
     </body>
     </html>
 </#macro>

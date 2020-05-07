@@ -18,6 +18,8 @@ $(function () {
     $('.container-fluid .add-group.addProdBtn').on('click', function (event) {
         event.preventDefault();
 
+       clearProductTables();
+
         $('.addProdModal #addProdModal').modal();
     })
 });
@@ -27,10 +29,53 @@ $(function () {
     $(".editProdBtn").on('click', function (event) {
         event.preventDefault();
 
+        clearProductTables();
+
         var href = $(this).attr('href');
-        $.get(href,function (product) {
+        $.get(href, function (product) {
             $(".addProdModal #prodName").val(product.name);
             $("#idProdModal").val(product.id);
+
+            // filling components table
+            var entriesComponents = Object.entries(product.componentsNumberMap);
+            var valuesComponents = Object.values(entriesComponents);
+            var entriesOperations = Object.entries(product.operationsSecondsMap);
+            var valuesOperations = Object.values(entriesOperations);
+
+            for (let [key, value] of valuesComponents) {//filling components table with received data
+                var newRow = $("<tr>");
+                var cols = "";
+                cols += '<th class="number" scope="row"></th>';
+                cols += '<td>' +
+                    '<input type="text" id="componentName" name="componentName" value="' + `${key}` + '" hidden>'
+                    + `${key}` + '</td>';
+                cols += '<td>' +
+                    '<input type="number" id="componentNumber" name="componentNumber" value="' + `${value}` + '" hidden>'
+                    + `${value}` + '</td>';
+                cols += '<td> <button type="button" id="btnDelComponent" class="btn btn-outline-danger btn-sm">ꟷ </button></td>';
+                newRow.append(cols);
+                $("table.component-list").append(newRow);
+                updateComponentRowsNumbers();
+            }
+
+            for (let [key, value] of valuesOperations) {//filling components table with received data
+                var newRow = $("<tr>");
+                var cols = "";
+
+                cols += '<th class="number" scope="row"></th>';
+                cols += '<td>' +
+                    '<input type="text" id="operationName" name="operationName" value="' + `${key}` + '" hidden>'
+                    + `${key}` + '</td>';
+                cols += '<td>' +
+                    '<input type="number" id="operationSeconds" name="operationSeconds" value="' + `${value}` + '" hidden>'
+                    + `${value}` + '</td>';
+                cols += '<td> <button type="button" id="btnDelOperation" class="btn btn-outline-danger btn-sm">ꟷ </button></td>';
+                newRow.append(cols);
+                $("table.operation-list").append(newRow);
+
+                updateOperationRowsNumbers();
+            }
+
         });
 
         $('.addProdModal #addProdModal').modal();
@@ -41,6 +86,7 @@ $(function () {
 $(function () {
     $("#btnAddComponent").on("click", function (event) {
         event.preventDefault();
+
         var newRow = $("<tr>");
         var cols = "";
         var name = $("#components-select option:selected").text();
@@ -118,3 +164,12 @@ $("#operation-list").on("click", "#btnDelOperation", function () {
     updateOperationRowsNumbers();
 
 });
+
+function clearProductTables() {
+    //$(".addProdModal #prodName").query.removeAttr('value');
+    $("#idProdModal").val('');
+    $("#prodName").val('');
+    $("table.component-list tr").remove();
+    $("table.operation-list tr").remove();
+
+}

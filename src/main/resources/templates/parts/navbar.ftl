@@ -5,7 +5,9 @@
        <#if isDispatcher>href="/dispatcher"</#if>
             <#if isForeman>href="/foreman"</#if>
             <#if isTech>href="/tech"</#if>
-    >Factory</a>
+    >Factory <#if isTech>| Панель техонолога</#if>
+        <#if isDispatcher>| Панель диспетчера</#if>
+        <#if isForeman>| Панель мастера цеха</#if></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -15,10 +17,10 @@
         <ul class="navbar-nav mr-auto">
             <#if isDispatcher>
                 <li class="nav-item">
-                    <a class="nav-link" href="/selling-plan">План продаж</a>
+                    <a class="nav-link" href="/dispatcherSellingPlan">План продаж</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/orders">Заказы</a>
+                    <a class="nav-link" href="/dispatcherOrders">Заказы</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/documentation">Документация</a>
@@ -41,11 +43,7 @@
                     <a class="nav-link" href="/documentation">Документация</a>
                 </li>
             </#if>
-            <#if isTech>
-                <li class="nav-item">
-                    | Панель техонолога
-                </li>
-            </#if>
+
 
         </ul>
 

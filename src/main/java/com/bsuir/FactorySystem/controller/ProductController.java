@@ -20,7 +20,7 @@ public class ProductController {
     public String saveProduct(@RequestParam String name, @RequestParam String[] componentName,
                               @RequestParam Integer[] componentNumber,
                               @RequestParam String[] operationName,
-                              @RequestParam Integer[] operationSeconds, @RequestParam Long idProdModal) {
+                              @RequestParam Integer[] operationSeconds, @RequestParam(defaultValue = "-1", required = false) Long idProdModal) {
 
         Optional<Product> optionalProduct = productRepository.findById(idProdModal);
         Product product = optionalProduct.isPresent() ? optionalProduct.get() : new Product();
