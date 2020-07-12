@@ -28,7 +28,7 @@
             </#if>
             <#if isForeman>
                 <li class="nav-item">
-                    <a class="nav-link" href="/orders-movement">Движение заказов</a>
+                    <a class="nav-link" href="/foremanOrdersMovement">Движение заказов</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/components">Комплектующие</a>

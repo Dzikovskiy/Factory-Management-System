@@ -43,8 +43,8 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -69,6 +69,7 @@
 			<artifactId>jquery</artifactId>
 			<version>3.4.1</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

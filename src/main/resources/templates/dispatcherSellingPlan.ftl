@@ -18,7 +18,7 @@
             <div class="jumbotron img-shadow my-5 py-5">
                 <div class="d-flex py--5 ">
                     <div class="col-2">
-                        <h2 class="">Январь</h2>
+                        <h2 class="">Май</h2>
                     </div>
                     <div class="col-6 mr-5">
                         <table class="table table-striped table-sm">
@@ -35,27 +35,26 @@
                                 <th scope="row">1</th>
                                 <td>степлер</td>
                                 <td>325</td>
-                                <td><i class="material-icons" style="font-size:25px; color: #59CD90">check_box</i></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>карандаш красный</td>
                                 <td>1500</td>
-                                <td><i class="material-icons" style="font-size:25px; color: #EB3E33">indeterminate_check_box</i>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
                                 <td>карандаш синий</td>
                                 <td>2500</td>
-                                <td><i class="material-icons" style="font-size:25px; color: #59CD90">check_box</i></td>
+                                <td></td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div class="col-3">
-                        <h4 class="">Не выполнен</h4>
+                        <h4 class="">Выполняется</h4>
                     </div>
                 </div>
 
@@ -63,7 +62,7 @@
             <div class="jumbotron img-shadow my-5 py-5">
                 <div class="d-flex py--5 ">
                     <div class="col-2">
-                        <h2 class="">Февраль</h2>
+                        <h2 class="">Июнь</h2>
                     </div>
                     <div class="col-6 mr-5">
                         <table class="table table-striped table-sm">
@@ -80,21 +79,20 @@
                                 <th scope="row">1</th>
                                 <td>степлер</td>
                                 <td>200</td>
-                                <td><i class="material-icons" style="font-size:25px; color: #59CD90">check_box</i></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>карандаш красный</td>
                                 <td>100</td>
-                                <td><i class="material-icons" style="font-size:25px; color: #59CD90">check_box</i>
-                                </td>
+                                <td></td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div class="col-3">
-                        <h4 class="">Выполнен</h4>
+                        <h4 class="">Выполняется</h4>
                     </div>
                 </div>
 

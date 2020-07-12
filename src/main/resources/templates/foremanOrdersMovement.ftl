@@ -2,23 +2,11 @@
 <#import "parts/dispatcher/addProdOrderModal.ftl" as apom>
 
 <@c.page>
-    <div class="container-fluid mt-5">
-        <div class="d-flex justify-content-end  mb-3">
-            <div class="add-group addProdOrderBtn mr-5">
-                <div class="d-flex my-3 mr-2 ml-3">
-                    <div class="add-group-text mr-5 px-3">Добавить<br/>заказ</div>
-                    <div class="circle-btn  yellow">
-                        <i class="material-icons" style="font-size:28px;">add</i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
+    <div class="container pt-5 mt-5">
         <div class="row mb-4">
-            <div class="col ml-5">
-                <div class="selling-plan-header">Производственные заказы:</div>
+            <div class="col ">
+                <div class="selling-plan-header">Движение заказов по производственному маршруту:</div>
             </div>
         </div>
 
