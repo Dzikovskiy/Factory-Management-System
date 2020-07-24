@@ -7,6 +7,8 @@
  
  ### Link to demo:
  
+ (технолог/technologist role 100% and диспетчер/dispatcher role 50% complete)
+ 
  https://factory-management-system.herokuapp.com
  
  # Project under development
